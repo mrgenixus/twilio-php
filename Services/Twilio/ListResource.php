@@ -15,12 +15,12 @@ abstract class Services_Twilio_ListResource
 {
     private $_page;
 
-    public function __construct($resource, $uri) {
+    public function __construct($client, $uri) {
         $name = $this->getResourceName(true);
         if (!isset($this->instance_name)) {
             $this->instance_name = "Services_Twilio_Rest_" . rtrim($name, 's');
         }
-        parent::__construct($resource, $uri);
+        parent::__construct($client, $uri);
     }
     /**
      * Gets a resource from this list.
