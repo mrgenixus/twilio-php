@@ -83,6 +83,8 @@ class Services_Twilio extends Services_Twilio_Resource
      *
      * @param string $path   Path to the resource
      * @param array  $params Query string parameters
+     * @param string $full_uri True if $path represents full URI including 
+     *      AfterSid
      *
      * @return object The object representation of the resource
      */
