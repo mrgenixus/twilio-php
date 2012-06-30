@@ -133,7 +133,12 @@ abstract class Services_Twilio_ListResource
         );
     }
 
-    public function getPageGenerator($page, $size, array $filters = array(), $next_page_uri = null) {
+    /* 
+     * Retrieve a new page of API results, and update iterator parameters.
+     */
+    public function getPageGenerator(
+        $page, $size, array $filters = array(), $next_page_uri = null
+    ) {
         $new_page = $this->getPage($page, $size, $filters, $next_page_uri);
         return array(
             'items' => $new_page->getItems(),

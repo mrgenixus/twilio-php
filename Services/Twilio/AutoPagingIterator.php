@@ -77,6 +77,9 @@ class Services_Twilio_AutoPagingIterator
         return false;
     }
 
+    /* 
+     * Fill $this->items with a new page from the API, if necessary.
+     */
     protected function loadIfNecessary()
     {
         if (// Empty because it's the first time or last page was empty
